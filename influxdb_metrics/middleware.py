@@ -95,6 +95,7 @@ class InfluxDBRequestMiddleware(object):
                     'full_path': url,
                     'path': request.path,
                     'campaign': campaign,
+                    'domain': request.get_host(),
                 },
                 'fields': {'value': ms, },
             }]
